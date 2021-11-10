@@ -14,14 +14,16 @@ import UserForm from './UserForm';
 //----------------  Setting Initial States  ----------------//
 // Set initial form values
 const initialFormValues = {
-  username: '',
+  first_name: '',
+  last_name: '',
   email: '',
   password: '',
   terms: false,
 };
 // Set initial form error values
 const initialFormErrors = {
-  username: '',
+  first_name: '',
+  last_name: '',
   email: '',
   password: '',
   terms: '',
@@ -44,7 +46,7 @@ function App() {
   const getUsers = () => {
     axios.get('https://reqres.in/api/users')
       .then(res => {
-        console.log(res);
+        setUsers(res.data.data);
       })
       .catch(err => {
         console.error(`Ruh roh Raggy! ${err}`);
@@ -55,7 +57,7 @@ function App() {
   const postNewUser = newUser => {
     axios.post('https://reqres.in/api/users', newUser)
       .then(res => {
-        console.log(res);
+        setUsers([res.data, ...users]);
       })
       .catch(err => {
         console.error(`Ruh roh Raggy! ${err}`);
@@ -89,7 +91,8 @@ function App() {
   // Submit event handler
   const formSubmit = () => {
     const newUser = {
-      username: formValues.username.trim(),
+      first_name: formValues.first_name.trim(),
+      last_name: formValues.last_name.trim(),
       email: formValues.email.trim(),
       password: formValues.password,
       terms: formValues.terms,
@@ -114,8 +117,24 @@ function App() {
 
   // Render content
   return (
-    <div className="App">
-      <h1>Bruh</h1>
+    <div className="container">
+      <header><h1>User Form</h1></header>
+
+      <UserForm
+        values={formValues}
+        change={inputChange}
+        submit={formSubmit}
+        disabled={disabled}
+        errors={formErrors}
+      />
+
+      {
+        users.map(user => {
+          return (
+            <User key={user.email} details={user} />
+          )
+        })
+      }
     </div>
   );
 }
