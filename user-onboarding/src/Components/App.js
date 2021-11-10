@@ -16,6 +16,7 @@ import UserForm from './UserForm';
 const initialFormValues = {
   first_name: '',
   last_name: '',
+  username: '',
   email: '',
   password: '',
   terms: false,
@@ -24,6 +25,7 @@ const initialFormValues = {
 const initialFormErrors = {
   first_name: '',
   last_name: '',
+  username: '',
   email: '',
   password: '',
   terms: '',
@@ -93,6 +95,7 @@ function App() {
     const newUser = {
       first_name: formValues.first_name.trim(),
       last_name: formValues.last_name.trim(),
+      username: formValues.username.trim(),
       email: formValues.email.trim(),
       password: formValues.password,
       terms: formValues.terms,

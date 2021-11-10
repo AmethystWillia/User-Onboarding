@@ -13,6 +13,11 @@ const formSchema = yup.object().shape({
         .trim()
         .required('Last name is required')
         .min(3, 'Last name must be at least 3 characters long'),
+    username: yup
+        .string()
+        .trim()
+        .required('Username is required')
+        .min(5, 'Username must be at least 5 characters long'),
     email: yup
         .string()
         .email('Email must have a valid address')

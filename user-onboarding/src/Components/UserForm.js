@@ -40,6 +40,7 @@ function UserForm(props) {
                 <div className='errors'>
                     <div>{errors.first_name}</div>
                     <div>{errors.last_name}</div>
+                    <div>{errors.username}</div>
                     <div>{errors.email}</div>
                     <div>{errors.password}</div>
                     <div>{errors.terms}</div>
@@ -63,6 +64,15 @@ function UserForm(props) {
                         value={values.last_name}
                         onChange={onChange}
                         name='last_name'
+                        type='text'
+                    />
+                </label>
+
+                <label>Username (5 characters minimum)
+                    <input
+                        value={values.username}
+                        onChange={onChange}
+                        name='username'
                         type='text'
                     />
                 </label>
