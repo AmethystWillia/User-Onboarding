@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Import CSS
-import './App.css';
+import './styles.css';
 
 // Exported component
 function UserForm(props) {

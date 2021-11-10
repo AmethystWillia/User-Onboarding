@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Import CSS
-import './App.css';
+import './styles.css';
 
 // Exported component
 function User({ details }) {
@@ -15,9 +15,9 @@ function User({ details }) {
     return (
         <div className='user container'>
             <h2>{`${details.first_name} ${details.last_name}`}</h2>
-            <p><strong>Email:</strong> {details.email}</p>
-            <p><strong>Password:</strong> {details.password}</p>
-            <p><strong>Agreed to Terms:</strong> Yes</p>
+            <p><span className='bold'>Email:</span> {details.email}</p>
+            <p><span className='bold'>Password:</span> {details.password}</p>
+            <p><span className='bold'>Agreed to Terms:</span> Yes</p>
         </div>
     )
 }

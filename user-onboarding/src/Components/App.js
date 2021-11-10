@@ -4,7 +4,7 @@ import axios from 'axios';
 import * as yup from 'yup';
 
 // Import CSS
-import './App.css';
+import './styles.css';
 
 // Import components
 import schema from '../Validation/formSchema';

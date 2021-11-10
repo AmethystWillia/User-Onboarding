@@ -1,11 +1,41 @@
+/* General Styles */
 * {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
 body {
+  font-size: 1.2rem;
   background-color: rgb(244, 244, 244);
   color: rgb(65, 75, 60);
   font-family: 'Bitter', serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  color: slateblue;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+
+a {
+  font-size: 1.4rem;
+}
+
+/* Container Styles */
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
@@ -17,13 +47,10 @@ body {
   background-color: white;
 }
 
+/* Form Styles */
 .container.form {
   display: flex;
   align-items: baseline;
-
-  @media (max-width: 650px) {
-    flex-direction: column;
-  }
 }
 
 .container.form.form-group {
@@ -43,23 +70,8 @@ body {
   flex: 1;
 }
 
-a {
-  font-size: 0.75em;
-}
-
-header {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1, h2, h3, h4 {
-  color: crimson;
-}
-
 form h2, h4, h4 {
-    color: darkblue;
+    color: mediumslateblue;
 }
 
 label {
@@ -73,27 +85,49 @@ input[type=text], select {
 }
 
 button {
+  font-size: 1.2rem;
+  font-family: 'Bitter', serif;
   height: 2rem;
   width: 6rem;
   border-radius: 8px;
-  color: rgb(30, 220, 20);
-  background-color: white;
-  border: 2px solid rgb(30, 220, 20);
+  color: rgb(0, 224, 112);
+  background-color: rgb(233, 255, 244);
+  border: 2px solid rgb(0, 224, 112);
 }
 button:hover {
   cursor: pointer;
 }
 button:disabled {
-  color: crimson;
-  background-color: white;
-  border: 2px solid crimson;
+  color: tomato;
+  background-color: #ffe4e0;
+  border: 2px solid tomato;
   cursor: not-allowed;
 }
 
+/* User Styles */
+.user.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+  width: 80%;
+  margin: 1% auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.user h1,p {
+  margin: 0.4%;
+}
+
+/* Error Styles */
 .errors {
   margin: 8px;
-  font-size: 0.7em;
-  color: red;
+  font-size: 1.4rem;
+  color: tomato;
+  text-decoration: underline;
 }
 
 .errors div {
