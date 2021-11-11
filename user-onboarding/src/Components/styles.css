@@ -1,0 +1,136 @@
+/* General Styles */
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2rem;
+  background-color: rgb(244, 244, 244);
+  color: rgb(65, 75, 60);
+  font-family: 'Bitter', serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  color: slateblue;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+
+a {
+  font-size: 1.4rem;
+}
+
+/* Container Styles */
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+  margin: 16px 8px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Form Styles */
+.container.form {
+  display: flex;
+  align-items: baseline;
+}
+
+.container.form.form-group {
+  padding: 0 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.submit {
+  flex: 2;
+  align-items: flex-start;
+}
+.form-group.inputs {
+  flex: 2;
+}
+.form-group.checkboxes {
+  flex: 1;
+}
+
+form h2, h4, h4 {
+    color: mediumslateblue;
+}
+
+label {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+input[type=text], select {
+  height: 1.5rem;
+}
+
+button {
+  font-size: 1.2rem;
+  font-family: 'Bitter', serif;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 8px;
+  color: rgb(0, 224, 112);
+  background-color: rgb(233, 255, 244);
+  border: 2px solid rgb(0, 224, 112);
+}
+button:hover {
+  cursor: pointer;
+}
+button:disabled {
+  color: tomato;
+  background-color: #ffe4e0;
+  border: 2px solid tomato;
+  cursor: not-allowed;
+}
+
+/* User Styles */
+.user.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+  width: 80%;
+  margin: 1% auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.user h1,p {
+  margin: 0.4%;
+}
+
+/* Error Styles */
+.errors {
+  margin: 8px;
+  font-size: 1.4rem;
+  color: tomato;
+  text-decoration: underline;
+}
+
+.errors div {
+    display: block;
+    margin-top: 4px;
+  }
