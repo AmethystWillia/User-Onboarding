@@ -82,9 +82,23 @@ describe('Quotes App', () => {
             passwordInput().type('A');
             termsInput().should('not.be.checked');
 
-            cy.contains('must').should('exist');
+            cy.contains('must').should('exist'); // All error messages contain the word must
 
             submitBtn().should('be.disabled');
+        });
+    });
+
+    describe('Submit new user', () => {
+        it('Can submit a new user and add it to webpage', () => {
+            firstNameInput().type('Ryoma');
+            lastNameInput().type('Hoshi');
+            usernameInput().type('hoshi_tennispro');
+            emailInput().type('tennis.pro@hope.com');
+            passwordInput().type('RussianBlues71');
+            termsInput().check();
+            submitBtn().click();
+
+            cy.contains('tennispro').should('exist');
         });
     });
 });
