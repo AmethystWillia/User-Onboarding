@@ -35,7 +35,7 @@ function UserForm(props) {
             <div className='form-group submit'>
                 <h2>Add User</h2>
 
-                <button disabled={disabled}>Submit</button>
+                <button id='submitBtn' disabled={disabled}>Submit</button>
 
                 <div className='errors'>
                     <div>{errors.first_name}</div>
